@@ -1,0 +1,29 @@
+<!-- AUTORA: ANTONELLA ALARES-->
+<?xml version="1.0" encoding="UTF-8"?>
+<configuracion>  <!--elemento raíz del documento XML - contiene todas las configuraciones de la aplicación web y la base de datos -->
+    <!-- Base de Datos -->
+    <base_datos>  <!-- aquí ponemos los detalles específicos de la configuración de la base de datos-->
+        <host>localhost</host>
+        <puerto>3306</puerto>
+        <nombre>mi_base_datos</nombre>
+        <usuario>username</usuario>
+        <contrasena>password</contrasena>
+    </base_datos>
+    
+    <!-- Servidor Web -->
+    <servidor_web> <!-- contiene los detalles de configuración específicos del servidor web-->
+        <puerto>8080</puerto> <!--  puerto de escucha -->
+        <ssl enabled="false"> <!--  habilitación de SSL-->
+            <clave>/path/to/private/key</clave> 
+            <certificado>/path/to/certificate</certificado>
+        </ssl>
+        <maxConexiones>100</maxConexiones>
+        <conexionTimeout>5000</conexionTimeout>
+    </servidor_web>
+    
+    <!-- Logging -->
+    <config_adicional>
+        <modo_debug>activado</modo_debug>
+        <log_direccion>logs/aplicacion.log</log_direccion>
+    </config_adicional>
+</configuracion>
